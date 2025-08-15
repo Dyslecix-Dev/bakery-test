@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: oklch(92% 0.004 286.32);
+  --background: oklch(98.5% 0 0);
   --foreground: oklch(14.1% 0.005 285.823);
 }
 
@@ -14,14 +14,14 @@
   --color-primary-pink-accent: #f58891;
   --color-secondary-teal: #8fd9d9;
   --color-tertiary-brown: #764549;
-  --color-light: oklch(92% 0.004 286.32);
+  --color-light: oklch(98.5% 0 0);
   --color-dark: oklch(14.1% 0.005 285.823);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: oklch(14.1% 0.005 285.823);
-    --foreground: oklch(92% 0.004 286.32);
+    --foreground: oklch(98.5% 0 0);
   }
 }
 
@@ -29,5 +29,40 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-spectral), Georgia, serif;
+}
+
+@keyframes change-bg {
+  0% {
+    background-color: var(--color-secondary-teal);
+    background-position: "0% 50%";
+  }
+  30% {
+    background-color: var(--color-secondary-teal);
+  }
+  80% {
+    background-color: var(--color-primary-pink-accent);
+  }
+  100% {
+    background-color: var(--color-primary-pink-accent);
+    background-position: "100% 50%";
+  }
+}
+
+.animate-change-bg {
+  animation: change-bg 3s alternate infinite;
+}
+
+@keyframes rock {
+  0%,
+  100% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+.animate-rock {
+  animation: rock 10s linear infinite;
 }
 
