@@ -1,5 +1,7 @@
 # Structure
 
+CHANGE IMAGES TO BE MUFFINS, COOKIES, PINEAPPLE UPSIDE DOWN CAKE, COFFEE CAKE, TRES LECHES CAKE, & FLAN.
+
 1. Hero
    - https://animata.design/docs/background/moving-gradient
 2. About

@@ -7,6 +7,7 @@ import { ReactLenis } from "lenis/react";
 import About from "@/app/_components/About";
 import Hero from "@/app/_components/Hero";
 
+// BUG: Horizontal layout shift on 600 px or less
 export default function Home() {
   return (
     <ReactLenis root>
@@ -15,13 +16,13 @@ export default function Home() {
           <Hero />
 
           <section className="bg-light grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1634560604992-7784a29bc419" alt="Macarons" fill className="object-cover" />
+            <Image src="https://images.unsplash.com/photo-1584847801423-852691e41bc7" alt="Cookies" fill className="object-cover" />
           </section>
 
           <About />
 
           <section className="bg-light grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1618427010844-7c779c47fa6e" alt="Donuts" fill className="object-cover" />
+            <Image src="https://images.unsplash.com/photo-1729682936220-48e6635e7d74" alt="Muffins" fill className="object-cover" />
           </section>
         </div>
 

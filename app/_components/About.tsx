@@ -4,7 +4,7 @@ import BrickBackground from "@/app/_components/BrickBackground";
 
 export default function About() {
   return (
-    <section className="bg-tertiary-brown grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
+    <section className="pt-28 sm:pt-20 md:pt-10 bg-tertiary-brown grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
       <BrickBackground />
 
       <div className="flex flex-col xl:flex-row items-center gap-x-20 gap-y-10 lg:gap-y-20 px-10 xl:px-20 2xl:px-40 z-2">
@@ -19,7 +19,7 @@ export default function About() {
           </p>
         </div>
 
-        <Image src="/baking_illustration.svg" alt="Nicole's Cupcakes Logo" width={500} height={500} priority />
+        <Image src="/baking_illustration.svg" alt="Illustration of two bakers" width={500} height={500} priority />
       </div>
     </section>
   );
