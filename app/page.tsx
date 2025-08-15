@@ -4,33 +4,29 @@ import Image from "next/image";
 
 import { ReactLenis } from "lenis/react";
 
+import About from "@/app/_components/About";
 import Hero from "@/app/_components/Hero";
 
 export default function Home() {
   return (
     <ReactLenis root>
-      <main>
+      <main className="max-w-screen text-dark">
         <div className="wrapper">
           <Hero />
 
-          <section className="bg-gray-300 text-black grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
+          <section className="bg-light grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
             <Image src="https://images.unsplash.com/photo-1634560604992-7784a29bc419" alt="Macarons" fill className="object-cover" />
           </section>
 
-          <section className="bg-gray-300 text-black grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
-            <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-            <h1 className="2xl:text-7xl text-4xl px-8 font-semibold text-center tracking-tight leading-[120%]">
-              If you don&apos;t like this Smooth Scroll then I&apos;m sorry, <br /> create your own and make it open source 💼
-            </h1>
-          </section>
+          <About />
 
-          <section className="text-white h-screen w-full bg-slate-950 grid place-content-center sticky top-0">
+          <section className="bg-light grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
             <Image src="https://images.unsplash.com/photo-1618427010844-7c779c47fa6e" alt="Donuts" fill className="object-cover" />
           </section>
         </div>
 
-        {/* Stacking images */}
-        <section className="text-white w-full bg-slate-950">
+        {/* Stacking images BUG: Causing overflow on right side of screen */}
+        {/* <section className="text-white w-full bg-slate-950">
           <div className="grid grid-cols-2 px-8">
             <div className="grid gap-2">
               <figure className="sticky top-0 h-screen grid place-content-center">
@@ -74,10 +70,10 @@ export default function Home() {
               <h1 className="text-4xl px-8 font-medium text-right tracking-tight leading-[120%]">Copied & Paste Every Component you want and make an creative website 😎</h1>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Zigzag images */}
-        <section className="text-white w-full bg-slate-950  ">
+        {/* Zigzag images BUG: Causing overflow on right side of screen */}
+        {/* <section className="text-white w-full bg-slate-950  ">
           <div className="grid grid-cols-2">
             <div className="sticky top-0 h-screen flex items-center justify-center">
               <h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
@@ -124,7 +120,7 @@ export default function Home() {
               </figure>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <footer className="group bg-slate-950 ">
           <h1 className="text-[16vw] group-hover:translate-y-4 translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
