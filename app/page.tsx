@@ -6,6 +6,7 @@ import { ReactLenis } from "lenis/react";
 
 import About from "@/app/_components/About";
 import Hero from "@/app/_components/Hero";
+import Menu from "@/app/_components/Menu";
 
 // BUG: Horizontal layout shift on 600 px or less
 export default function Home() {
@@ -26,52 +27,7 @@ export default function Home() {
           </section>
         </div>
 
-        {/* Stacking images BUG: Causing overflow on right side of screen */}
-        {/* <section className="text-white w-full bg-slate-950">
-          <div className="grid grid-cols-2 px-8">
-            <div className="grid gap-2">
-              <figure className="sticky top-0 h-screen grid place-content-center">
-                <Image
-                  src="https://images.unsplash.com/photo-1688577727939-3c065e99890b?w=500&auto=format&fit=crop"
-                  alt="Brownies"
-                  height="384"
-                  width="384"
-                  className="transition-all duration-300 w-96 h-96 align-bottom object-cover rounded-md"
-                />
-              </figure>
-              <figure className="sticky top-0 h-screen grid place-content-center">
-                <Image
-                  src="https://images.unsplash.com/photo-1642930142061-e1f1b1e04eed?w=500&auto=format&fit=crop"
-                  alt="Birthday cake"
-                  height="384"
-                  width="384"
-                  className="transition-all duration-300 w-96 h-96 align-bottom object-cover rounded-md"
-                />
-              </figure>
-              <figure className="sticky top-0 h-screen grid place-content-center">
-                <Image
-                  src="https://images.unsplash.com/photo-1610562275255-03b7fa0d4655?w=500&auto=format&fit=crop"
-                  alt="Gingerbread cookies"
-                  height="384"
-                  width="384"
-                  className="transition-all duration-300 w-96 h-96 align-bottom object-cover rounded-md"
-                />
-              </figure>
-              <figure className="sticky top-0 h-screen grid place-content-center">
-                <Image
-                  src="https://images.unsplash.com/photo-1637076073458-58b5ad542cf7?w=500&auto=format&fit=crop"
-                  alt="Pumpkin pie"
-                  height="384"
-                  width="384"
-                  className="transition-all duration-300 w-96 h-96 align-bottom object-cover rounded-md"
-                />
-              </figure>
-            </div>
-            <div className="sticky top-0 h-screen grid place-content-center">
-              <h1 className="text-4xl px-8 font-medium text-right tracking-tight leading-[120%]">Copied & Paste Every Component you want and make an creative website 😎</h1>
-            </div>
-          </div>
-        </section> */}
+        <Menu />
 
         {/* Zigzag images BUG: Causing overflow on right side of screen */}
         {/* <section className="text-white w-full bg-slate-950  ">
@@ -125,7 +81,7 @@ export default function Home() {
 
         <footer className="group bg-slate-950 ">
           <h1 className="text-[16vw] group-hover:translate-y-4 translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
-            ui-layout
+            TODO FOOTER
           </h1>
           <section className="bg-black h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full">Thanks for Scrolling</section>
         </footer>
@@ -133,26 +89,4 @@ export default function Home() {
     </ReactLenis>
   );
 }
-
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <section>
-//       <div className="bg-primary-pink">
-//         <h1 className="font-spectral text-dark text-4xl">Spectral</h1>
-//       </div>
-
-//       <div className="bg-secondary-teal">
-//         <h2 className="font-jetbrains text-primary-pink-accent text-4xl">Jetbrains</h2>
-//       </div>
-
-//       <div className="bg-tertiary-brown">
-//         <h2 className="text-light text-4xl">No font (still Spectral)</h2>
-//       </div>
-
-//       <Image src="/logo.png" alt="Nicole's Cupcakes Logo" width={200} height={200} priority className=" rounded-full" />
-//     </section>
-//   );
-// }
 

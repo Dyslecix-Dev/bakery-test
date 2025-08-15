@@ -4,7 +4,7 @@ import BrickBackground from "@/app/_components/BrickBackground";
 
 export default function About() {
   return (
-    <section className="pt-28 sm:pt-20 md:pt-10 bg-tertiary-brown grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
+    <section className="pt-28 sm:pt-20 md:pt-0 bg-tertiary-brown grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
       <BrickBackground />
 
       <div className="flex flex-col xl:flex-row items-center gap-x-20 gap-y-10 lg:gap-y-20 px-10 xl:px-20 2xl:px-40 z-2">

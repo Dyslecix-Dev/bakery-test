@@ -16,8 +16,8 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  title: "Bakery Test",
-  description: "Proof of concept for a friend's bakery website",
+  title: "Snickerdoodle's Desserts",
+  description: "Nicole Lees's bakery website",
 };
 
 export default function RootLayout({
