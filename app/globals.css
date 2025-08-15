@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --background: oklch(92% 0.004 286.32);
+  --foreground: oklch(14.1% 0.005 285.823);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-jetbrains: var(--font-jetbrains-mono);
+  --font-spectral: var(--font-spectral);
+  --color-primary-pink: #fddce0;
+  --color-primary-pink-accent: #f58891;
+  --color-secondary-teal: #8fd9d9;
+  --color-tertiary-brown: #764549;
+  --color-light: oklch(92% 0.004 286.32);
+  --color-dark: oklch(14.1% 0.005 285.823);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(14.1% 0.005 285.823);
+    --foreground: oklch(92% 0.004 286.32);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-spectral), Georgia, serif;
+}
+
