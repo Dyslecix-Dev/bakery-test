@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Menu() {
   return (
-    <section className="text-dark w-full bg-secondary-teal">
+    <section id="menu-section" className="text-dark w-full bg-secondary-teal">
       <div className="grid grid-cols-2 px-8">
         <div className="grid gap-2">
           <figure className="sticky top-0 h-screen grid place-content-center">

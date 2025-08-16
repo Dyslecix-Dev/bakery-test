@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-export default function Contact() {
+export default function ContactSection() {
   return (
     <section className="w-full bg-primary-pink">
       <div className="grid grid-cols-2">

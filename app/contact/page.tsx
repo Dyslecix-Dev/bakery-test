@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { AnimatePresence, motion } from "motion/react";
 
-export default function Contact() {
+export default function ContactPage() {
   const [selected, setSelected] = useState("individual");
   return (
     <section className="min-h-screen p-4 pt-20 flex items-center justify-center bg-primary-pink">
