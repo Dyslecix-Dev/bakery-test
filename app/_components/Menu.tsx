@@ -50,8 +50,8 @@ export default function Menu() {
         <div className="sticky top-0 h-screen grid place-content-center gap-4 z-10 transform-gpu">
           <h2 className="hidden sm:block sm:text-2xl md:text-3xl lg:text-5xl 2xl:text-7xl px-8 font-medium text-right tracking-tight leading-[120%] will-change-transform">Have a sweet tooth?</h2>
 
-          <p className="ml-4 sm:ml-0 font-jetbrains text-lg sm:text-sm md:text-lg lg:text-2xl 2xl:text-4xl text-center will-change-transform">
-            Take a look at our <GradientShadowButton />
+          <p className="ml-4 sm:ml-0 text-lg sm:text-sm md:text-lg lg:text-2xl 2xl:text-4xl text-center will-change-transform">
+            Take a look at our <GradientButton />
           </p>
         </div>
       </div>
@@ -59,14 +59,14 @@ export default function Menu() {
   );
 }
 
-const GradientShadowButton = () => {
+const GradientButton = () => {
   return (
     <Link
       href="/menu.png"
       download="snickerdoodle-menu.png"
       className="group relative inline-block align-middle rounded bg-gradient-to-br from-primary-pink-accent to-primary-pink p-px transition-all duration-300 hover:scale-105 active:scale-95"
     >
-      <span className="inline-block rounded bg-tertiary-brown px-1.5 py-0.5 font-jetbrains text-slate-100 transition-all duration-300 group-hover:bg-tertiary-brown/20 group-hover:text-slate-50 group-active:bg-tertiary-brown/50">
+      <span className="inline-block rounded bg-tertiary-brown px-1.5 py-0.5 text-slate-100 transition-all duration-300 group-hover:bg-tertiary-brown/20 group-hover:text-slate-50 group-active:bg-tertiary-brown/50">
         menu
       </span>
     </Link>

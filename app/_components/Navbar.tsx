@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Dispatch, ReactNode, SetStateAction, useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
@@ -10,7 +11,11 @@ import { useMotionValueEvent, AnimatePresence, useScroll, motion } from "motion/
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
+
+  const pathname = usePathname();
   const { scrollY } = useScroll();
+
+  console.log(pathname !== "/");
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 550 ? true : false);
@@ -20,10 +25,10 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 z-50 w-full px-6 text-light 
       transition-all duration-300 ease-out lg:px-12
-      ${scrolled ? "h-16 bg-primary-pink-accent py-3 shadow-xl" : "h-20 bg-primary-pink/0 shadow-none"}`}
+      ${scrolled || pathname !== "/" ? "h-16 bg-primary-pink-accent py-3 shadow-xl" : "h-20 bg-primary-pink/0 shadow-none"}`}
     >
-      <div className={`h-full mx-auto flex max-w-7xl items-center ${scrolled ? "justify-between" : "justify-between lg:justify-end"}`}>
-        <Logo scrolled={scrolled} />
+      <div className={`h-full mx-auto flex max-w-7xl items-center ${scrolled || pathname !== "/" ? "justify-between" : "justify-between lg:justify-end"}`}>
+        <Logo pathname={pathname} scrolled={scrolled} />
 
         <div className="hidden gap-6 lg:flex">
           <Links />
@@ -35,7 +40,7 @@ export default function Navbar() {
   );
 }
 
-const Logo = ({ scrolled, setMenuOpen }: { scrolled?: boolean; setMenuOpen?: Dispatch<SetStateAction<boolean>> }) => {
+const Logo = ({ pathname, scrolled, setMenuOpen }: { pathname?: string; scrolled?: boolean; setMenuOpen?: Dispatch<SetStateAction<boolean>> }) => {
   return (
     <Link
       onClick={(e) => {
@@ -43,7 +48,7 @@ const Logo = ({ scrolled, setMenuOpen }: { scrolled?: boolean; setMenuOpen?: Dis
         if (setMenuOpen) setMenuOpen(false);
       }}
       href="/"
-      className={`flex items-center gap-4 cursor-pointer ${!scrolled && "lg:hidden"}`}
+      className={`flex items-center gap-4 cursor-pointer ${!scrolled && pathname === "/" && "lg:hidden"}`}
     >
       <span className="font-bold text-dark text-2xl">Snickerdoodle&apos;s</span>
 
@@ -67,10 +72,10 @@ const Links = () => {
 const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
   return (
     <div className="relative h-fit w-fit group">
-      <a href={href} className="relative text-dark">
+      <Link href={href} className="relative text-dark">
         {children}
         <span className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-tertiary-brown transition-transform duration-300 ease-out group-hover:scale-x-100" />
-      </a>
+      </Link>
     </div>
   );
 };
@@ -144,7 +149,7 @@ const LINKS = [
   },
   {
     text: "Contact",
-    href: "#",
+    href: "/contact",
   },
   {
     text: "FAQ",

@@ -1,0 +1,72 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ReactNode } from "react";
+
+export default function Contact() {
+  return (
+    <section className="w-full bg-primary-pink">
+      <div className="grid grid-cols-2">
+        <div className="sticky top-0 h-screen flex items-center justify-center">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+            We don&apos;t bite.
+            <br />
+            <NavLink href="/contact">Contact us</NavLink>
+          </h2>
+        </div>
+
+        <div className="grid gap-2">
+          <figure className="grid place-content-center -skew-x-2">
+            <Image
+              src="https://images.unsplash.com/photo-1611588275568-72ecc1a502d1?w=500&auto=format&fit=crop"
+              alt="Kneading dough"
+              height="384"
+              width="320"
+              className="transition-all duration-300 w-80 h-96 align-bottom object-cover "
+            />
+          </figure>
+
+          <figure className="grid place-content-center skew-x-2">
+            <Image
+              src="https://images.unsplash.com/photo-1624715136693-c06de266b622?w=500&auto=format&fit=crop"
+              alt="Squeezing profiteroles on baking sheet"
+              height="384"
+              width="320"
+              className="transition-all duration-300 w-80 h-96 align-bottom object-cover "
+            />
+          </figure>
+
+          <figure className="grid place-content-center -skew-x-2">
+            <Image
+              src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=500&auto=format&fit=crop"
+              alt="Decorating a cake"
+              height="384"
+              width="320"
+              className="transition-all duration-300 w-80 h-96 align-bottom object-cover "
+            />
+          </figure>
+
+          <figure className="grid place-content-center skew-x-2">
+            <Image
+              src="https://images.unsplash.com/photo-1512223792601-592a9809eed4?w=500&auto=format&fit=crop"
+              alt="Sprinkling cinnamon"
+              height="384"
+              width="320"
+              className="transition-all duration-300 w-80 h-96 align-bottom object-cover "
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
+  return (
+    <div className="relative h-fit w-fit group">
+      <Link href={href} className="relative text-tertiary-brown">
+        {children}
+        <span className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full  bg-tertiary-brown transition-transform duration-300 ease-out group-hover:scale-x-100" />
+      </Link>
+    </div>
+  );
+};
