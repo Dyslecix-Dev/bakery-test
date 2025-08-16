@@ -9,7 +9,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { useMotionValueEvent, AnimatePresence, useScroll, motion } from "motion/react";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -93,7 +93,7 @@ const MobileMenuLink = ({ children, setMenuOpen }: { children: ReactNode; href: 
 };
 
 const MobileMenu = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <div className="block lg:hidden">

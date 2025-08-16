@@ -47,10 +47,10 @@ export default function Menu() {
           </figure>
         </div>
 
-        <div className="sticky top-0 h-screen grid place-content-center gap-x-4 z-10 transform-gpu">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl 2xl:text-7xl px-8 font-medium text-right tracking-tight leading-[120%] will-change-transform">Have a sweet tooth?</h2>
+        <div className="sticky top-0 h-screen grid place-content-center gap-4 z-10 transform-gpu">
+          <h2 className="hidden sm:block sm:text-2xl md:text-3xl lg:text-5xl 2xl:text-7xl px-8 font-medium text-right tracking-tight leading-[120%] will-change-transform">Have a sweet tooth?</h2>
 
-          <p className="font-jetbrains text-lg lg:text-2xl 2xl:text-4xl text-center will-change-transform">
+          <p className="ml-4 sm:ml-0 font-jetbrains text-lg sm:text-sm md:text-lg lg:text-2xl 2xl:text-4xl text-center will-change-transform">
             Take a look at our <GradientShadowButton />
           </p>
         </div>
