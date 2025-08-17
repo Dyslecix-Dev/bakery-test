@@ -19,7 +19,7 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <Image src="/baking_illustration.svg" alt="Illustration of two bakers" width={500} height={500} priority />
+        <Image src="/baking_illustration.svg" alt="Illustration of two bakers" width={500} height={500} />
       </div>
     </section>
   );
