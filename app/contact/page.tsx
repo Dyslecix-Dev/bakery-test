@@ -4,8 +4,6 @@ import { useState } from "react";
 
 import { AnimatePresence, motion } from "motion/react";
 
-import ZigzagBackground from "@/app/_components/_background/ZigzagBackground";
-
 export default function ContactPage() {
   const [selected, setSelected] = useState<string>("individual");
 

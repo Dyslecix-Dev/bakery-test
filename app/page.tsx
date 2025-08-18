@@ -6,6 +6,7 @@ import { ReactLenis } from "lenis/react";
 
 import AboutSection from "@/app/_components/_home/AboutSection";
 import ContactSection from "@/app/_components/_home/ContactSection";
+import Footer from "@/app/_components/Footer";
 import Hero from "@/app/_components/_home/Hero";
 import MenuSection from "@/app/_components/_home/MenuSection";
 
@@ -32,12 +33,7 @@ export default function Home() {
 
         <ContactSection />
 
-        <footer className="group bg-slate-950 ">
-          <h1 className="text-[16vw] group-hover:translate-y-4 translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
-            TODO FOOTER
-          </h1>
-          <section className="bg-black h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full">Thanks for Scrolling</section>
-        </footer>
+        <Footer />
       </main>
     </ReactLenis>
   );

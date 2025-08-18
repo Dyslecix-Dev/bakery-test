@@ -9,7 +9,7 @@ export default function AboutSection() {
 
       <div className="flex flex-col xl:flex-row items-center gap-x-20 gap-y-10 lg:gap-y-20 px-10 xl:px-20 2xl:px-40 z-2">
         <div className="font-semibold text-light tracking-tight space-y-4 lg:space-y-10">
-          <h1 className="text-2xl sm:text-4xl lg:text-6xl 2xl:text-7xl text-center leading-[120%]">My Baking Journey</h1>
+          <h2 className="text-2xl sm:text-4xl lg:text-6xl 2xl:text-7xl text-center leading-[120%]">My Baking Journey</h2>
 
           <p className="font-jetbrains text-xs sm:text-sm lg:text-lg text-justify">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, quam? Consequatur minima illum labore maxime eius beatae quasi dolore sequi non, sint iusto qui placeat veritatis est autem

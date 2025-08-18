@@ -59,6 +59,7 @@ export default function Menu() {
   );
 }
 
+// TODO: Replace button with underline hover
 const GradientButton = () => {
   return (
     <Link

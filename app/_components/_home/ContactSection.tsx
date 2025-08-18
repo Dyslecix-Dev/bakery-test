@@ -66,6 +66,7 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
     <div className="relative h-fit w-fit group">
       <Link href={href} className="relative text-2xl md:text-3xl lg:text-5xl text-tertiary-brown">
         {children}
+        {/* TODO: add mobile active */}
         <span className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full  bg-tertiary-brown transition-transform duration-300 ease-out group-hover:scale-x-100" />
       </Link>
     </div>

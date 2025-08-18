@@ -60,7 +60,7 @@ const Logo = ({ pathname, scrolled, setMenuOpen }: { pathname?: string; scrolled
       href="/"
       className={`flex items-center gap-4 cursor-pointer ${!scrolled && pathname === "/" && "lg:hidden"}`}
     >
-      <span className="font-bold text-dark text-2xl">Snickerdoodle&apos;s</span>
+      <h1 className="font-bold text-dark text-2xl">Snickerdoodle&apos;s</h1>
 
       <Image src="/logos/no-text-logo.png" alt="Snickerdoodle's Desserts Logo" width={60} height={60} priority className=" rounded-full" />
     </Link>
@@ -135,6 +135,7 @@ const NavLink = ({ children, href, router, pathname }: { children: ReactNode; hr
     <div className="relative h-fit w-fit group">
       <Link href={href} className="relative text-dark" onClick={handleClick}>
         {children}
+        {/* TODO: add mobile active */}
         <span className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-tertiary-brown transition-transform duration-300 ease-out group-hover:scale-x-100" />
       </Link>
     </div>
