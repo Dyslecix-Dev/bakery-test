@@ -13,3 +13,11 @@ export interface ChangingBackgroundProps extends ComponentPropsWithoutRef<"div">
   animated?: boolean;
   gradientClassName?: string;
 }
+
+export interface ZigzagBackgroundProps {
+  bgColor?: string;
+  lineColor?: string;
+  size?: number;
+  children?: React.ReactNode;
+  className?: string;
+}

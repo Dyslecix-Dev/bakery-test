@@ -4,8 +4,11 @@ import { useState } from "react";
 
 import { AnimatePresence, motion } from "motion/react";
 
+import ZigzagBackground from "@/app/_components/_background/ZigzagBackground";
+
 export default function ContactPage() {
-  const [selected, setSelected] = useState("individual");
+  const [selected, setSelected] = useState<string>("individual");
+
   return (
     <section className="min-h-screen p-4 pt-20 flex items-center justify-center bg-primary-pink">
       <div className="w-full max-w-6xl mx-auto shadow-lg flex flex-col-reverse lg:flex-row rounded-lg overflow-hidden">
