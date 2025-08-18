@@ -23,6 +23,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const targetSection = sessionStorage.getItem("scrollToSection");
+
     if (targetSection && pathname === "/") {
       setTimeout(() => {
         smoothScrollToSection(targetSection);
@@ -62,7 +63,7 @@ const Logo = ({ pathname, scrolled, setMenuOpen }: { pathname?: string; scrolled
     >
       <h1 className="font-bold text-dark text-2xl">Snickerdoodle&apos;s</h1>
 
-      <Image src="/logos/no-text-logo.png" alt="Snickerdoodle's Desserts Logo" width={60} height={60} priority className=" rounded-full" />
+      <Image src="/logos/no-text-logo.png" alt="Snickerdoodle's Desserts Logo" width={60} height={60} priority loading="eager" className="rounded-full" />
     </Link>
   );
 };
@@ -114,7 +115,7 @@ const handleNavigation = (href: string, router: AppRouterInstance, pathname: str
 const Links = ({ router, pathname }: { router: AppRouterInstance; pathname: string }) => {
   return (
     <div className="flex items-center gap-6 font-jetbrains text-dark">
-      {LINKS.map((l) => (
+      {NAV_LINKS.map((l) => (
         <NavLink key={l.text} href={l.href} router={router} pathname={pathname}>
           {l.text}
         </NavLink>
@@ -135,7 +136,6 @@ const NavLink = ({ children, href, router, pathname }: { children: ReactNode; hr
     <div className="relative h-fit w-fit group">
       <Link href={href} className="relative text-dark" onClick={handleClick}>
         {children}
-        {/* TODO: add mobile active */}
         <span className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-tertiary-brown transition-transform duration-300 ease-out group-hover:scale-x-100" />
       </Link>
     </div>
@@ -204,7 +204,7 @@ const MobileMenu = ({ router, pathname }: { router: AppRouterInstance; pathname:
             </div>
 
             <div className="h-screen overflow-y-scroll bg-secondary-teal p-6">
-              {LINKS.map((l) => (
+              {NAV_LINKS.map((l) => (
                 <MobileMenuLink key={l.text} href={l.href} setMenuOpen={setOpen} router={router} pathname={pathname}>
                   {l.text}
                 </MobileMenuLink>
@@ -217,7 +217,7 @@ const MobileMenu = ({ router, pathname }: { router: AppRouterInstance; pathname:
   );
 };
 
-const LINKS = [
+const NAV_LINKS = [
   {
     text: "About",
     href: "/#about-section",

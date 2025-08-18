@@ -1,4 +1,6 @@
-# Structure
+# TODO
 
-1. Attach SendGrid to Contact form
-2. Web Accessibility
+1. Replace placeholder About text
+2. Add footer links
+3. Attach SendGrid to Contact form
+4. Web Accessibility

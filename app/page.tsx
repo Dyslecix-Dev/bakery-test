@@ -19,13 +19,13 @@ export default function Home() {
           <Hero />
 
           <section className="bg-light grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1584847801423-852691e41bc7" alt="Cookies" fill className="object-cover" />
+            <Image src="https://images.unsplash.com/photo-1584847801423-852691e41bc7" alt="Cookies" fill loading="lazy" className="object-cover" />
           </section>
 
           <AboutSection />
 
           <section className="bg-light grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1729682936220-48e6635e7d74" alt="Muffins" fill className="object-cover" />
+            <Image src="https://images.unsplash.com/photo-1729682936220-48e6635e7d74" alt="Muffins" fill loading="lazy" className="object-cover" />
           </section>
         </div>
 

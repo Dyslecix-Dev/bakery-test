@@ -28,14 +28,15 @@ const Form = ({ selected, setSelected }: { selected: string; setSelected: (selec
       <h3 className="text-4xl font-bold mb-6">Contact us</h3>
 
       <div className="mb-6">
-        <p className="text-2xl mb-2">Hi 👋! My name is...</p>
+        <p className="text-2xl mb-2">Hello! My name is...</p>
         <input type="text" placeholder="Your name..." className="text-dark bg-light transition-colors duration-[750ms] placeholder-tertiary-brown p-2 rounded-md w-full focus:outline-0" />
       </div>
 
       <div className="mb-6">
-        <p className="text-2xl mb-2">and I represent...</p>
+        <p className="text-2xl mb-2">I represent...</p>
         <FormSelect selected={selected} setSelected={setSelected} />
       </div>
+
       <AnimatePresence>
         {selected === "company" && (
           <motion.div
@@ -63,7 +64,7 @@ const Form = ({ selected, setSelected }: { selected: string; setSelected: (selec
       <div className="mb-6">
         <p className="text-2xl mb-2">I&apos;d love to ask about...</p>
         <textarea
-          placeholder="Whatever your heart desires :)"
+          placeholder="Whip up your message here :)"
           className="min-h-[150px] text-dark bg-light transition-colors duration-[750ms] placeholder-tertiary-brown p-2 rounded-md w-full focus:outline-0 resize-none"
         />
       </div>
@@ -118,11 +119,12 @@ const Images = ({ selected }: { selected: string }) => {
         className="absolute inset-0 bg-slate-200"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80)",
+            "url(https://images.unsplash.com/photo-1607977293913-f4b36d704e48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
+
       <motion.div
         initial={false}
         animate={{
@@ -131,7 +133,8 @@ const Images = ({ selected }: { selected: string }) => {
         transition={BASE_TRANSITION}
         className="absolute inset-0 bg-slate-200"
         style={{
-          backgroundImage: "url(https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)",
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1670899460364-ebc917bac09a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

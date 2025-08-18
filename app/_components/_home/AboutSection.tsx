@@ -9,8 +9,9 @@ export default function AboutSection() {
 
       <div className="flex flex-col xl:flex-row items-center gap-x-20 gap-y-10 lg:gap-y-20 px-10 xl:px-20 2xl:px-40 z-2">
         <div className="font-semibold text-light tracking-tight space-y-4 lg:space-y-10">
-          <h2 className="text-2xl sm:text-4xl lg:text-6xl 2xl:text-7xl text-center leading-[120%]">My Baking Journey</h2>
+          <h2 className="text-2xl sm:text-4xl lg:text-6xl xl:text-4xl 2xl:text-5xl text-center leading-[120%]">How the Cookie Crumbled</h2>
 
+          {/* TODO: Replace placeholder text */}
           <p className="font-jetbrains text-xs sm:text-sm lg:text-lg text-justify">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, quam? Consequatur minima illum labore maxime eius beatae quasi dolore sequi non, sint iusto qui placeat veritatis est autem
             adipisci animi vero saepe quam, totam consequuntur ea facere minus neque? Adipisci dolorem velit accusantium voluptatum sunt ullam odio a, fugiat est distinctio aliquam quia praesentium
@@ -19,7 +20,7 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <Image src="/baking_illustration.svg" alt="Illustration of two bakers" width={500} height={500} />
+        <Image src="/baking_illustration.svg" alt="Illustration of two bakers" width={500} height={500} loading="lazy" />
       </div>
     </section>
   );
