@@ -6,7 +6,10 @@ import { usePathname, useRouter } from "next/navigation";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { Dispatch, ReactNode, SetStateAction, useState, useEffect } from "react";
 
+import { FaXTwitter, FaYelp } from "react-icons/fa6";
 import { FiMenu, FiX } from "react-icons/fi";
+import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io";
+import { IoLogoTiktok } from "react-icons/io5";
 
 import { useMotionValueEvent, AnimatePresence, useScroll, motion } from "motion/react";
 
@@ -203,12 +206,26 @@ const MobileMenu = ({ router, pathname }: { router: AppRouterInstance; pathname:
               </button>
             </div>
 
-            <div className="h-screen overflow-y-scroll bg-secondary-teal p-6">
+            <div className="h-screen w-full overflow-y-scroll bg-secondary-teal p-6">
               {NAV_LINKS.map((l) => (
                 <MobileMenuLink key={l.text} href={l.href} setMenuOpen={setOpen} router={router} pathname={pathname}>
                   {l.text}
                 </MobileMenuLink>
               ))}
+
+              <div className="flex items-center justify-between py-6">
+                {SOCIAL_LINKS.map(({ href, icon: Icon }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-jetbrains text-tertiary-brown active:text-secondary-teal active:bg-tertiary-brown transition-all duration-500 ease-in-out"
+                  >
+                    <Icon className="text-4xl" />
+                  </Link>
+                ))}
+              </div>
             </div>
           </motion.nav>
         )}
@@ -229,5 +246,29 @@ const NAV_LINKS = [
   {
     text: "Contact",
     href: "/contact",
+  },
+];
+
+// TODO: Add links
+const SOCIAL_LINKS = [
+  {
+    href: "#",
+    icon: IoLogoFacebook,
+  },
+  {
+    href: "#",
+    icon: IoLogoInstagram,
+  },
+  {
+    href: "#",
+    icon: IoLogoTiktok,
+  },
+  {
+    href: "#",
+    icon: FaXTwitter,
+  },
+  {
+    href: "#",
+    icon: FaYelp,
   },
 ];

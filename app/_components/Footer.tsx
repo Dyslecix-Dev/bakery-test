@@ -41,7 +41,7 @@ const SOCIAL_LINKS = [
     icon: FaXTwitter,
   },
   {
-    href: "https://yelp.com/biz/yourbiz",
+    href: "#",
     icon: FaYelp,
   },
 ];
