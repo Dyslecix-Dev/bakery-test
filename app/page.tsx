@@ -6,7 +6,6 @@ import { ReactLenis } from "lenis/react";
 
 import AboutSection from "@/app/_components/_home/AboutSection";
 import ContactSection from "@/app/_components/_home/ContactSection";
-import Footer from "@/app/_components/Footer";
 import Hero from "@/app/_components/_home/Hero";
 import MenuSection from "@/app/_components/_home/MenuSection";
 
@@ -32,8 +31,6 @@ export default function Home() {
         <MenuSection />
 
         <ContactSection />
-
-        <Footer />
       </main>
     </ReactLenis>
   );

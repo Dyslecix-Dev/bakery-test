@@ -5,6 +5,7 @@ import { JetBrains_Mono, Spectral } from "next/font/google";
 
 import "./globals.css";
 
+import Footer from "@/app/_components/Footer";
 import Navbar from "@/app/_components/Navbar";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -34,6 +35,8 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+
+        <Footer />
       </body>
     </html>
   );
